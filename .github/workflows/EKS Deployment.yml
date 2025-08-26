@@ -45,7 +45,11 @@ jobs:
 
     - name: Terraform Plan
       working-directory: Day-One/cluster/
-      run: terraform plan -var="k8sVersion=1.27"
+      run: |
+        echo "plan=$(terraform plan -no-color -input=false)" >> $GITHUB_OUTPUT
+
+    - name: Show Terraform Plan Output
+      run: echo "${{ steps.plan.outputs.plan }}"
     
     - name: Terraform Apply
       working-directory: Day-One/cluster/
