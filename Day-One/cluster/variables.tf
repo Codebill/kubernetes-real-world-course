@@ -20,7 +20,7 @@ variable "EKSClusterName" {
 
 variable "k8sVersion" {
   type = string
-  default = "1.26"
+  default = "1.33"
 }
 
 variable "workerNodeIAM" {
