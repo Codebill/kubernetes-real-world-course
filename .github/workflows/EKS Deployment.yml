@@ -56,4 +56,4 @@ jobs:
     
     - name: Terraform Apply
       working-directory: Day-One/cluster/
-      run: terraform apply -var="k8sVersion=1.27" -auto-approve
+      run: terraform apply -var="k8sVersion=1.33" -auto-approve
