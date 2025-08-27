@@ -127,6 +127,12 @@ resource "aws_eks_node_group" "worker-node-group" {
 }
 
 resource "aws_eks_addon" "csi" {
-  cluster_name = aws_eks_cluster.eks.name
-  addon_name   = "aws-ebs-csi-driver"
+  cluster_name             = aws_eks_cluster.eks.name
+  addon_name               = "aws-ebs-csi-driver"
+  resolve_conflicts        = "OVERWRITE"
+  addon_version            = "v1.26.1-eksbuild.1"
+
+  lifecycle {
+    ignore_changes = [configuration_values]
+  }
 }
