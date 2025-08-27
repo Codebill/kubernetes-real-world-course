@@ -1,11 +1,11 @@
 variable "pubsub1" {
   type = string
-  default = "subnet-051c49a4d8434be66"
+  default = "subnet-0c3fe234f335c8d3f"
 }
 
 variable "pubsub2" {
   type = string
-  default = "subnet-02273f25c912d46ee"
+  default = "subnet-0f6345341eb22f55b"
 }
 
 variable "eksIAMRole" {
@@ -44,7 +44,7 @@ variable "min_size" {
 
 variable "instanceType" {
   type = list
-  default = ["t3.xlarge"]
+  default = ["t2.xlarge"]
 }
 
 variable "environment" {
