@@ -5,7 +5,7 @@ variable "pubsub1" {
 
 variable "pubsub2" {
   type = string
-  default = "subnet-0f6345341eb22f55b"
+  default = "subnet-01fbde2d1666dc9d7"
 }
 
 variable "eksIAMRole" {
