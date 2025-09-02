@@ -36,15 +36,15 @@ jobs:
       uses: hashicorp/setup-terraform@v3
 
     - name: Terraform Init
-      working-directory: Day-One/vpc/
+      working-directory: Day-One/vpc/dev
       run: terraform init -backend-config "bucket=dj1bucket" -backend-config "key=eks-prod.tfstate"
            
     - name: Terraform Format
-      working-directory: Day-One/vpc/
+      working-directory: Day-One/vpc/dev
       run: terraform fmt
 
     - name: Terraform Plan
-      working-directory: Day-One/vpc/
+      working-directory: Day-One/vpc/dev
       run: |
         plan=$(terraform plan -no-color -input=false)
         echo "plan<<EOF" >> $GITHUB_OUTPUT
