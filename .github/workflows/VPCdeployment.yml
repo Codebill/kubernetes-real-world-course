@@ -55,5 +55,5 @@ jobs:
       run: echo "${{ steps.plan.outputs.plan }}"
     
     - name: Terraform Apply
-      working-directory: Day-One/cluster/
+      working-directory: Day-One/vpc/dev
       run: terraform apply -var="k8sVersion=1.33" -auto-approve

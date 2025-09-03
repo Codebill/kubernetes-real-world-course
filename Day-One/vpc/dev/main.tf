@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "djdemo-bucket"
+    bucket = "dj1bucket"
     key    = "aws-terraform-vpc-dev.tfstate"
-    region = "us-west-1"
+    region = "us-east-1"
   }
   required_providers {
     aws = {
