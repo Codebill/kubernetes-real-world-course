@@ -44,7 +44,7 @@ resource "aws_subnet" "pubsub2" {
 resource "aws_subnet" "privsub1" {
     vpc_id = aws_vpc.main.id
     cidr_block = "10.16.3.0/24"
-    availability_zone = "us-east-1c"
+    availability_zone = "us-west-1a"
 
     tags = {
         Name = "privsub1-${var.environment}"
@@ -54,7 +54,7 @@ resource "aws_subnet" "privsub1" {
 resource "aws_subnet" "privsub2" {
     vpc_id = aws_vpc.main.id
     cidr_block = "10.16.4.0/24"
-    availability_zone = "us-east-1d"
+    availability_zone = "us-west-1b"
 
     tags = {
         Name = "privsub2-${var.environment}"
