@@ -44,7 +44,7 @@ variable "min_size" {
 
 variable "instanceType" {
   type = list
-  default = ["t2.xlarge"]
+  default = ["t2.medium"]
 }
 
 variable "environment" {
