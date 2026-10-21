@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "dj1bucket"
+    bucket = "djtrusted"
     key    = "aws-terraform-vpc-dev.tfstate"
     region = "us-west-1"
   }
