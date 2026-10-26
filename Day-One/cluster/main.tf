@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "djtrusted"
-    key    = "eks-terraform.tfstate"
-    region = "us-west-1"
+    bucket = "dj1bucket"
+    key    = "eks-prod.tfstate"
+    region = "us-east-1"
   }
   required_providers {
     aws = {
